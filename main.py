@@ -1,25 +1,25 @@
 from turtle import Screen, Turtle
-from paddle import Paddle  # to import Paddle class from paddle.py
-from ball import Ball    # to import Ball class from ball.py
-from scoreboard import Scoreboard # to import class Scoreboard class from scoreboard.py
-import time      # to import time module
+from paddle import Paddle                  # to import Paddle class from paddle.py
+from ball import Ball                      # to import Ball class from ball.py
+from scoreboard import Scoreboard          # to import class Scoreboard class from scoreboard.py
+import time                                # to import time module
 
 screen = Screen()
-screen.bgcolor("black")  # set screen color to black
-screen.setup(width=800, height=600) # set screen dimensions
-screen.title("Pong")   # set screen title to Pong
-screen.tracer(0)     # to control animation of turtle
+screen.bgcolor("black")                    # set screen color to black
+screen.setup(width=800, height=600)        # set screen dimensions
+screen.title("Pong")                       # set screen title to Pong
+screen.tracer(0)                           # to control animation of turtle
 
-r_paddle = Paddle((350, 0))  # create right side paddle from Paddle class
-l_paddle = Paddle((-350, 0)) # create left side paddle from Paddle class
-ball = Ball()    # create an instance of Ball class
-scoreboard = Scoreboard() # create instance of Scoreboard class
+r_paddle = Paddle((350, 0))                # create right side paddle from Paddle class
+l_paddle = Paddle((-350, 0))               # create left side paddle from Paddle class
+ball = Ball()                              # create an instance of Ball class
+scoreboard = Scoreboard()                  # create instance of Scoreboard class
 
-screen.listen()  # to make screen listen to keystrokes
-screen.onkey(r_paddle.go_up, "Up") # bind function with 'Up' key
-screen.onkey(r_paddle.go_down, "Down") # bind function with 'Down' key
-screen.onkey(l_paddle.go_up, "w") # bind function with 'w' key
-screen.onkey(l_paddle.go_down, "s") # bind function with 's' key
+screen.listen()                            # to make screen listen to keystrokes
+screen.onkey(r_paddle.go_up, "Up")         # bind function with 'Up' key
+screen.onkey(r_paddle.go_down, "Down")     # bind function with 'Down' key
+screen.onkey(l_paddle.go_up, "w")          # bind function with 'w' key
+screen.onkey(l_paddle.go_down, "s")        # bind function with 's' key
 
 game_is_on = True
 while game_is_on:
