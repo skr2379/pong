@@ -44,6 +44,7 @@ while game_is_on:
     if ball.xcor() < -380:
         ball.reset_position()
         scoreboard.r_point()
+        
      # winner selection criteria and stop the game   
     if abs(scoreboard.l_score-scoreboard.r_score) >= 5:
             if scoreboard.l_score > scoreboard.r_score:
